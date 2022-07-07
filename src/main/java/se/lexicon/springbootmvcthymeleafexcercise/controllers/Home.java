@@ -16,6 +16,7 @@ public class Home {
         return "index";
     }
 
+
     @GetMapping("/contact")
     public String contact() {
         return "contact";
