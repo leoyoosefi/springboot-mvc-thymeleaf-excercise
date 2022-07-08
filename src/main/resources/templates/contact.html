@@ -15,16 +15,36 @@
 </head>
 <body>
 
+<nav th:insert="fragments/navbar :: nav_fragment"></nav>
 
 
 
 
-<form>
-    <label>Post</label><br>
-    <input type="text" id="">
 
-    <button type="button" class="btn btn-danger">ADD</button>
+
+
+<form th:action="@{/contact}" method="post">
+    <div class=>
+        <label class="justify-content-start" for="contactInfo"><span th:text="#{lbl.name}"></span>:</label>
+        <input type="text" class="form-control" id="contactInfo" placeholder="Enter Contact Info" name="contactInfo">
+        <br>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
 </form>
+<div class="col-md-3">
+    <div class="card text-center bg-success text-white mb-3">
+        <div class="card-body">
+            <h3><span th:text="#{contacts.header}"></span></h3>
+            <br>
+            <a th:href="@{/list}" class="btn btn-outline-light btn-sm"><span th:text="#{button.ret}"></span> </a>
+        </div>
+    </div>
+</div>
+
+
+
+<footer th:replace="fragments/footer :: footer_fragment">
+</footer>
 
 
 
