@@ -13,18 +13,24 @@
     <script defer th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
     <script defer th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
+
+<style>
+
+    body{
+        background-color: #343a40;
+    }
+</style>
 <body>
 
 <nav th:insert="fragments/navbar :: nav_fragment"></nav>
 
 
 
-<header class="my-4 py-4 bg-info text-white">
+<header class="my-4 py-4 bg-warning text-secondary">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1>
-                    <i class="fas fa-folder"></i> <span th:text="#{lbl.contacts}"></span> </h1>
+                <h1><span th:text="#{lbl.contacts}"></span> </h1>
             </div>
         </div>
     </div>
@@ -35,7 +41,7 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header bg-success text-white">
+                    <div class="card-header bg-warning text-secondary">
                         <h4><span th:text="#{contact.header}"></span></h4>
                     </div>
                     <div class="card-body">
@@ -44,14 +50,14 @@
                                 <label class="justify-content-start" for="contactInfo"><span th:text="#{lbl.name}"></span>:</label>
                                 <input type="text" class="form-control" id="contactInfo" placeholder="Enter Contact Info" name="contactInfo">
                                 <br>
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" class="btn btn-warning">Add</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card text-center bg-success text-white mb-3">
+                <div class="card text-center bg-warning text-secondary mb-3">
                     <div class="card-body">
                         <h3><span th:text="#{contactList.header}"></span></h3>
                         <br>
