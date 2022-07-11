@@ -17,13 +17,11 @@
 
 <nav th:insert="fragments/navbar :: nav_fragment"></nav>
 
-
-  <h1>Contact Form</h1>
-  <form th:action="@{/contact}" method="post">
-    Email: <input type="text" th:name="email"><br/>
+<h3>Contact Form</h3>
+<form th:action="@{/contact}" method="post">
+   Email:  <input type="text" th:name="email"><br/>
     <button type="submit">Submit</button>
-  </form>
-
+</form>
 
 <footer th:replace="fragments/footer :: footer_fragment">
 </footer>

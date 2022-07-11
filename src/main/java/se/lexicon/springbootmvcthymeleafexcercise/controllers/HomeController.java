@@ -12,11 +12,9 @@ import java.util.List;
 
 
 @Controller
-public class HomeController
-{
+public class HomeController{
+
     List<String> contactList = new ArrayList<>();
-
-
     @GetMapping({"/","/index"})
     public String index(){
         return "index";
@@ -24,21 +22,16 @@ public class HomeController
     @GetMapping("/contact")
     public String contact(){
         return "contact";
-}
+    }
     @PostMapping("/contact")
     public String contact(@RequestParam("email") String email){
-    System.out.println("Email: " + email);
-    contactList.add(email);
-    return "redirect:/contactList";
-
-}
+        System.out.println("email" + email);
+        contactList.add(email);
+        return "redirect:/contactList";
+    }
 @GetMapping("/contactList")
-public String contactList(Model model){
-        model.addAttribute("contactList",contactList);
+    public String contactList(Model model){
+        model.addAttribute("contactList", contactList);
         return "contactList";
-
-
-
-   }
-
+    }
 }

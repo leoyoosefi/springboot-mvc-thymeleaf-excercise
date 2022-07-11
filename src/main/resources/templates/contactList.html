@@ -11,12 +11,13 @@
 <body>
 
 <h3>Contact List</h3>
-<ul>
-    <li th:each="email:${contactList}"><span th:text="${email}"></span></li>
-</ul>
-<hr>
-<a th:href="@{/contact}">Back to Add Contact</a>
 
+<ul>
+    <li th:each="email :${contactList}"><span th:text="${email}"></span></li>
+</ul>
+
+<hr>
+<a th:href="@{/contact}">Return to add contact</a>
 
 
 <footer th:replace="fragments/footer :: footer_fragment">
